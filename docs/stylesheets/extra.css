@@ -1,0 +1,341 @@
+/* ==========================================================================
+   Engineering the AI-Native Cloud — theme
+   Palette lifted from the talk's hero-slide artwork:
+     - Deep indigo/navy night skies  -> dark mode background
+     - Warm gold leaf detailing      -> accent (borders, buttons, icons only)
+     - Imperial purple (closing card)-> secondary accent
+   Hard accessibility rule: body copy, headings and links are ALWAYS pure
+   black (#000000) on light backgrounds or pure white (#ffffff) on dark
+   backgrounds. Grey is never used for text -- only for hairline borders
+   on large decorative surfaces where no text sits.
+   ========================================================================== */
+
+:root {
+  --anc-gold: #c9a227;
+  --anc-gold-strong: #a9841a;
+  --anc-purple: #4b3f8a;
+  --anc-navy: #0b0f1e;
+  --anc-navy-2: #131a30;
+}
+
+/* ---------- Dark scheme (default; matches the slide artwork) ------------ */
+[data-md-color-scheme="anc-dark"] {
+  --md-default-bg-color: var(--anc-navy);
+  --md-default-fg-color: #ffffff;
+  --md-default-fg-color--light: #ffffff;
+  --md-default-fg-color--lighter: #ffffff;
+  --md-default-fg-color--lightest: #ffffff;
+
+  --md-primary-fg-color: var(--anc-navy-2);
+  --md-primary-fg-color--light: var(--anc-navy-2);
+  --md-primary-fg-color--dark: var(--anc-navy);
+  --md-primary-bg-color: #ffffff;
+  --md-primary-bg-color--light: #ffffff;
+
+  --md-accent-fg-color: var(--anc-gold);
+  --md-accent-fg-color--transparent: rgba(201, 162, 39, 0.15);
+  --md-accent-bg-color: #000000;
+
+  --md-typeset-color: #ffffff;
+  --md-typeset-a-color: #ffffff;
+
+  --md-code-bg-color: #171f38;
+  --md-code-fg-color: #ffffff;
+
+  --md-footer-bg-color: var(--anc-navy-2);
+  --md-footer-bg-color--dark: var(--anc-navy);
+  --md-footer-fg-color: #ffffff;
+  --md-footer-fg-color--light: #ffffff;
+
+  color-scheme: dark;
+}
+
+/* ---------- Light scheme -------------------------------------------------*/
+[data-md-color-scheme="anc-light"] {
+  --md-default-bg-color: #ffffff;
+  --md-default-fg-color: #000000;
+  --md-default-fg-color--light: #000000;
+  --md-default-fg-color--lighter: #000000;
+  --md-default-fg-color--lightest: #000000;
+
+  --md-primary-fg-color: #ffffff;
+  --md-primary-fg-color--light: #ffffff;
+  --md-primary-fg-color--dark: #ffffff;
+  --md-primary-bg-color: #000000;
+  --md-primary-bg-color--light: #000000;
+
+  --md-accent-fg-color: var(--anc-gold-strong);
+  --md-accent-fg-color--transparent: rgba(169, 132, 26, 0.12);
+  --md-accent-bg-color: #ffffff;
+
+  --md-typeset-color: #000000;
+  --md-typeset-a-color: #000000;
+
+  --md-code-bg-color: #f2f0e6;
+  --md-code-fg-color: #000000;
+
+  --md-footer-bg-color: #000000;
+  --md-footer-bg-color--dark: #000000;
+  --md-footer-fg-color: #ffffff;
+  --md-footer-fg-color--light: #ffffff;
+
+  color-scheme: light;
+}
+
+/* ---------- Global overrides: no grey text, anywhere --------------------- */
+.md-typeset,
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3,
+.md-typeset h4,
+.md-typeset h5,
+.md-typeset h6,
+.md-typeset p,
+.md-typeset li,
+.md-typeset td,
+.md-typeset th,
+.md-nav__link,
+.md-nav__title,
+.md-tabs__link,
+.md-footer-meta,
+.md-footer__link,
+.md-header__topic {
+  color: var(--md-default-fg-color) !important;
+}
+
+.md-typeset a,
+.md-typeset a:visited {
+  color: var(--md-default-fg-color);
+  text-decoration: underline;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.15em;
+  font-weight: 600;
+}
+
+.md-typeset a:hover,
+.md-typeset a:focus {
+  color: var(--md-default-fg-color);
+  text-decoration-color: var(--md-accent-fg-color);
+  text-decoration-thickness: 0.16em;
+}
+
+/* Strong, visible focus ring everywhere (keyboard accessibility) */
+:focus-visible {
+  outline: 3px solid var(--anc-gold) !important;
+  outline-offset: 2px;
+}
+
+/* Header / nav bar keeps brand ink, never grey */
+.md-header {
+  border-bottom: 1px solid var(--anc-gold);
+}
+
+.md-tabs {
+  border-bottom: 1px solid var(--anc-gold);
+}
+
+[data-md-color-scheme="anc-dark"] .md-header,
+[data-md-color-scheme="anc-dark"] .md-tabs,
+[data-md-color-scheme="anc-dark"] .md-footer {
+  background-color: var(--anc-navy-2);
+}
+
+[data-md-color-scheme="anc-light"] .md-header,
+[data-md-color-scheme="anc-light"] .md-tabs {
+  background-color: #000000;
+}
+
+/* Search box + inputs keep readable ink */
+.md-search__input {
+  color: var(--md-default-fg-color) !important;
+}
+
+/* ---------- Skip-to-content link (built into Material's base.html) ------ */
+.md-skip {
+  background: var(--anc-gold) !important;
+  color: #000000 !important;
+  font-weight: 700;
+}
+.md-skip:focus {
+  outline: 3px solid #000000;
+  outline-offset: 2px;
+}
+
+/* ---------- Hero banner (top of every chapter page) ----------------------*/
+.hero-banner {
+  position: relative;
+  margin: -1.2rem -1.2rem 1.6rem -1.2rem;
+  border-radius: 0.15rem;
+  overflow: hidden;
+  border: 1px solid var(--anc-gold);
+}
+.hero-banner img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.hero-banner__caption {
+  padding: 0.6rem 1rem;
+  background: var(--anc-navy-2);
+  color: #ffffff !important;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-top: 1px solid var(--anc-gold);
+}
+[data-md-color-scheme="anc-light"] .hero-banner__caption {
+  background: #000000;
+  color: #ffffff !important;
+}
+
+@media screen and (min-width: 76.25em) {
+  .hero-banner {
+    margin: -1.2rem -1.6rem 1.6rem -1.6rem;
+  }
+}
+
+/* ---------- Chapter meta strip (time / theme tags) ------------------------*/
+.chapter-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.2rem;
+}
+.chapter-meta__tag {
+  border: 1px solid var(--anc-gold);
+  color: var(--md-default-fg-color);
+  background: transparent;
+  border-radius: 999px;
+  padding: 0.2rem 0.85rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+/* ---------- Homepage hero + thumbnail grid --------------------------------*/
+.home-hero {
+  position: relative;
+  margin: -1.2rem -1.2rem 2rem -1.2rem;
+  border-radius: 0.15rem;
+  overflow: hidden;
+  border: 1px solid var(--anc-gold);
+}
+.home-hero img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+@media screen and (min-width: 76.25em) {
+  .home-hero {
+    margin: -1.2rem -1.6rem 2rem -1.6rem;
+  }
+}
+
+.chapter-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.25rem;
+  margin: 1.5rem 0 2.5rem 0;
+  list-style: none;
+  padding: 0;
+}
+
+.chapter-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--anc-gold);
+  border-radius: 0.2rem;
+  overflow: hidden;
+  background: var(--md-default-bg-color);
+  text-decoration: none !important;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.chapter-card:hover,
+.chapter-card:focus-within {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+.chapter-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  display: block;
+  border-bottom: 1px solid var(--anc-gold);
+}
+.chapter-card__body {
+  padding: 0.9rem 1rem 1.1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  flex: 1;
+}
+.chapter-card__num {
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--anc-gold) !important;
+}
+.chapter-card__title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--md-default-fg-color) !important;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+}
+.chapter-card:hover .chapter-card__title,
+.chapter-card:focus-within .chapter-card__title {
+  text-decoration-color: var(--anc-gold);
+}
+.chapter-card__desc {
+  font-size: 0.9rem;
+  color: var(--md-default-fg-color) !important;
+  margin: 0;
+}
+.chapter-card__link {
+  margin-top: auto;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--md-default-fg-color) !important;
+}
+
+/* ---------- Exercise / callout styling ------------------------------------*/
+.md-typeset .admonition,
+.md-typeset details {
+  border-color: var(--anc-gold);
+}
+.md-typeset .admonition-title,
+.md-typeset summary {
+  background-color: rgba(201, 162, 39, 0.12);
+}
+.md-typeset .admonition-title::before,
+.md-typeset summary::before {
+  background-color: var(--anc-gold) !important;
+}
+
+/* ---------- Buttons (resources page, CTA) ---------------------------------*/
+.md-typeset .anc-button {
+  display: inline-block;
+  padding: 0.5rem 1.1rem;
+  border-radius: 999px;
+  border: 2px solid var(--anc-gold);
+  color: var(--md-default-fg-color) !important;
+  font-weight: 700;
+  text-decoration: none !important;
+  margin: 0.25rem 0.5rem 0.25rem 0;
+}
+.md-typeset .anc-button:hover,
+.md-typeset .anc-button:focus {
+  background: var(--anc-gold);
+  color: #000000 !important;
+}
+
+/* ---------- Footer prev/next: keep pure ink, gold divider ------------------*/
+.md-footer-nav__link .md-footer-nav__title,
+.md-footer-nav__link .md-ellipsis {
+  color: #ffffff !important;
+}
+[data-md-color-scheme="anc-light"] .md-footer-nav__link .md-footer-nav__title,
+[data-md-color-scheme="anc-light"] .md-footer-nav__link .md-ellipsis {
+  color: #ffffff !important;
+}
