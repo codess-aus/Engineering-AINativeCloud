@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Engineering the AI-Native Cloud — theme
+   Engineering the AI-Native Cloud - theme
    Palette lifted from the talk's hero-slide artwork:
      - Deep indigo/navy night skies  -> dark mode background
      - Warm gold leaf detailing      -> accent (borders, buttons, icons only)
@@ -231,18 +231,20 @@
   }
 }
 
-.chapter-grid {
+.md-typeset ul.chapter-grid:not([hidden]) {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1.25rem;
   margin: 1.5rem 0 2.5rem 0;
   list-style: none;
   padding: 0;
 }
 
-.chapter-card {
+.md-typeset .chapter-grid > .chapter-card {
   display: flex;
   flex-direction: column;
+  min-width: 0;
+  margin: 0;
   border: 1px solid var(--anc-gold);
   border-radius: 0.2rem;
   overflow: hidden;
@@ -257,7 +259,8 @@
 }
 .chapter-card img {
   width: 100%;
-  height: 150px;
+  aspect-ratio: 16 / 9;
+  height: auto;
   object-fit: cover;
   display: block;
   border-bottom: 1px solid var(--anc-gold);
@@ -297,6 +300,18 @@
   font-size: 0.85rem;
   font-weight: 700;
   color: var(--md-default-fg-color) !important;
+}
+
+@media screen and (max-width: 59.984375em) {
+  .md-typeset ul.chapter-grid:not([hidden]) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media screen and (max-width: 39.984375em) {
+  .md-typeset ul.chapter-grid:not([hidden]) {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* ---------- Exercise / callout styling ------------------------------------*/

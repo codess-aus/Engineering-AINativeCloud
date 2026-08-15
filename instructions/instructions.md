@@ -1,4 +1,4 @@
-Never use emdashes —
+Never use emdashes -
 
 ---
 applyTo: '**'
@@ -11,9 +11,9 @@ Comprehensive accessibility rules for web application development. Every anti-pa
 
 **Severity levels:**
 
-- **CRITICAL** — Users cannot access content at all. Must be fixed before merge.
-- **IMPORTANT** — Significant barrier for assistive technology users. Fix in same sprint.
-- **SUGGESTION** — Improves usability for assistive technology. Plan for a future iteration.
+- **CRITICAL** - Users cannot access content at all. Must be fixed before merge.
+- **IMPORTANT** - Significant barrier for assistive technology users. Fix in same sprint.
+- **SUGGESTION** - Improves usability for assistive technology. Plan for a future iteration.
 
 ---
 
@@ -89,7 +89,7 @@ Comprehensive accessibility rules for web application development. Every anti-pa
 
 > **New AAA criteria in 2.2** (not required for AA, but recommended): 2.4.12 Focus Not Obscured (Enhanced), 2.4.13 Focus Appearance, 3.3.9 Accessible Authentication (Enhanced).
 
-> **Looking ahead:** WCAG 3.0 (W3C Accessibility Guidelines) is in Working Draft (March 2026). It replaces pass/fail with Bronze/Silver/Gold conformance and "Outcomes" instead of "Success Criteria." It is NOT yet a standard — continue targeting WCAG 2.2 AA.
+> **Looking ahead:** WCAG 3.0 (W3C Accessibility Guidelines) is in Working Draft (March 2026). It replaces pass/fail with Bronze/Silver/Gold conformance and "Outcomes" instead of "Success Criteria." It is NOT yet a standard - continue targeting WCAG 2.2 AA.
 
 ## Legal Enforcement Context (2026)
 
@@ -103,11 +103,11 @@ Comprehensive accessibility rules for web application development. Every anti-pa
 
 ## Five Rules of ARIA
 
-1. **Prefer native HTML** — Use `<button>` not `<div role="button">`. Native elements have built-in keyboard, focus, and semantics.
-2. **Don't change native semantics where prohibited** — Don't add `role="heading"` to a `<button>`. Use the correct element.
-3. **All ARIA controls must be keyboard operable** — If `role="button"`, handle Enter and Space key events.
-4. **Don't use `aria-hidden="true"` on focusable elements** — Hidden from assistive tech but still focusable creates a "ghost" element.
-5. **All interactive elements need an accessible name** — Via label, `aria-label`, `aria-labelledby`, or visible text content.
+1. **Prefer native HTML** - Use `<button>` not `<div role="button">`. Native elements have built-in keyboard, focus, and semantics.
+2. **Don't change native semantics where prohibited** - Don't add `role="heading"` to a `<button>`. Use the correct element.
+3. **All ARIA controls must be keyboard operable** - If `role="button"`, handle Enter and Space key events.
+4. **Don't use `aria-hidden="true"` on focusable elements** - Hidden from assistive tech but still focusable creates a "ghost" element.
+5. **All interactive elements need an accessible name** - Via label, `aria-label`, `aria-labelledby`, or visible text content.
 
 ---
 
@@ -145,7 +145,7 @@ Prefer one `<h1>` per page representing the main topic. Use `<h2>` for sections.
 
 Maintain logical nesting: `h1 > h2 > h3 > h4`. Style headings with CSS, not by choosing a different heading level.
 
-### S4: Div Soup — No Landmark Elements
+### S4: Div Soup - No Landmark Elements
 
 - **Severity**: IMPORTANT
 - **Detection**: Pages using only `<div>` without `<nav>`, `<main>`, `<header>`, `<footer>`
@@ -207,7 +207,7 @@ Use CSS Grid/Flexbox for layout. If table must be used for layout, add `role="pr
 - **WCAG**: 4.1.2 (A)
 
 ```tsx
-// BAD — not focusable, no role, no keyboard support
+// BAD - not focusable, no role, no keyboard support
 <div onClick={handleClick}>Submit</div>
 
 // GOOD
@@ -257,10 +257,10 @@ Invalid roles are ignored by assistive technology. Common mistakes: `role="input
 - **WCAG**: ARIA Rule 1
 
 ```html
-<!-- BAD — requires manual keyboard, focus, and state management -->
+<!-- BAD - requires manual keyboard, focus, and state management -->
 <div role="checkbox" aria-checked="false" tabindex="0">Accept terms</div>
 
-<!-- GOOD — all behavior built-in -->
+<!-- GOOD - all behavior built-in -->
 <label><input type="checkbox" /> Accept terms</label>
 ```
 
@@ -290,7 +290,7 @@ Browsers will ignore the presentation role on focusable elements.
 - **WCAG**: 4.1.3 (AA)
 
 ```html
-<!-- GOOD — content announced when content is injected into a preexisting live region element in the DOM -->
+<!-- GOOD - content announced when content is injected into a preexisting live region element in the DOM -->
 <div role="status" aria-live="polite">Item saved successfully</div>
 <!-- Use role="alert" (assertive) for errors -->
 <div role="alert">Failed to save. Please try again.</div>
@@ -322,7 +322,7 @@ Only use `tabindex="0"` (add to tab order) and `tabindex="-1"` (programmatic foc
 - **Detection**: Modal/overlay without Escape key handler or focus trapping
 - **WCAG**: 2.1.2 (A)
 
-Use native `<dialog>` with `showModal()` — it prevents keyboard focus from moving to the inert non-dialog content. Additionally, it has built in Escape key to dismiss, and focus will automatically return to the invoking element (if available). If a custom modal dialog implementation is needed: trap Tab within the dialog or use the `inert` attribute for non-dialog content (do not use `inert` on an element that contains the dialog), dismiss on Escape (unless user confirmation of an action is essential), return focus to the trigger element on close, or to best logical location if triggering element is no longer present upon dismissal.
+Use native `<dialog>` with `showModal()` - it prevents keyboard focus from moving to the inert non-dialog content. Additionally, it has built in Escape key to dismiss, and focus will automatically return to the invoking element (if available). If a custom modal dialog implementation is needed: trap Tab within the dialog or use the `inert` attribute for non-dialog content (do not use `inert` on an element that contains the dialog), dismiss on Escape (unless user confirmation of an action is essential), return focus to the trigger element on close, or to best logical location if triggering element is no longer present upon dismissal.
 
 ### K4: Missing Skip Link
 
@@ -421,7 +421,7 @@ On submit failure, focus the first invalid field or show and focus an error summ
 - **Detection**: Puzzle/image CAPTCHAs without fallback; password fields with `autocomplete='off'` or paste-blocking JavaScript
 - **WCAG**: 3.3.8 (AA)
 
-Use reCAPTCHA v3 (invisible), hCaptcha accessibility mode, or alternative authentication. Never block paste or autofill on password fields — this violates WCAG 3.3.8.
+Use reCAPTCHA v3 (invisible), hCaptcha accessibility mode, or alternative authentication. Never block paste or autofill on password fields - this violates WCAG 3.3.8.
 
 ### F6: Placeholder as Label
 
@@ -442,10 +442,10 @@ Always pair placeholder with a visible `<label>`. Placeholder is a hint, not a l
 - **WCAG**: 1.4.3 (AA)
 
 ```css
-/* BAD — #999 on #fff is ~2.5:1 */
+/* BAD - #999 on #fff is ~2.5:1 */
 .text { color: #999; background: #fff; }
 
-/* GOOD — #595959 on #fff is 7.0:1 */
+/* GOOD - #595959 on #fff is 7.0:1 */
 .text { color: #595959; background: #fff; }
 ```
 

@@ -1,6 +1,6 @@
 ---
 title: Engineering the AI-Native Cloud
-description: Cloud Native AI in the SDLC — a DevOps Asia Conference companion site on agentic workflows, GitHub Copilot, and owning the code in an AI-native world.
+description: Cloud Native AI in the SDLC - a DevOps Asia Conference companion site on agentic workflows, GitHub Copilot, and owning the code in an AI-native world.
 hide:
   - navigation
 ---
@@ -14,13 +14,13 @@ hide:
 </div>
 
 **Cloud Native AI in the SDLC.** This is the companion site for a DevOps Asia Conference talk about what
-changes — and what doesn't — when AI agents join the software delivery lifecycle. It is built for engineers,
+changes - and what doesn't - when AI agents join the software delivery lifecycle. It is built for engineers,
 tech leads and platform teams who already run cloud-native pipelines and now need to fold agentic AI,
 GitHub Copilot, and multi-agent review into that same discipline: version control, code review, CI/CD,
 governance and audit.
 
 The talk's core argument is simple: **AI-native is a redesign of your SDLC, not a plugin bolted onto it.**
-Every chapter below expands one beat of the talk into something you can actually apply on Monday morning —
+Every chapter below expands one beat of the talk into something you can actually apply on Monday morning -
 with links back to primary GitHub and Microsoft documentation so you can go deeper than the slide.
 
 !!! note "How this site is organised"
@@ -49,7 +49,7 @@ with links back to primary GitHub and Microsoft documentation so you can go deep
       <span class="chapter-card__body">
         <span class="chapter-card__num">Chapter 2</span>
         <span class="chapter-card__title">Rule Zero: You Own the Code</span>
-        <span class="chapter-card__desc">The one non-negotiable rule of agentic engineering — and why it doesn't change no matter how autonomous the tooling gets.</span>
+        <span class="chapter-card__desc">The one non-negotiable rule of agentic engineering - and why it doesn't change no matter how autonomous the tooling gets.</span>
         <span class="chapter-card__link">Read chapter →</span>
       </span>
     </a>
@@ -60,7 +60,7 @@ with links back to primary GitHub and Microsoft documentation so you can go deep
       <span class="chapter-card__body">
         <span class="chapter-card__num">Chapter 3</span>
         <span class="chapter-card__title">Rule Zero in Practice: Accountability</span>
-        <span class="chapter-card__desc">What "approve the pull request" actually means when the diff was written by an agent — and how to design that gate.</span>
+        <span class="chapter-card__desc">What "approve the pull request" actually means when the diff was written by an agent - and how to design that gate.</span>
         <span class="chapter-card__link">Read chapter →</span>
       </span>
     </a>
@@ -82,7 +82,7 @@ with links back to primary GitHub and Microsoft documentation so you can go deep
       <span class="chapter-card__body">
         <span class="chapter-card__num">Chapter 5</span>
         <span class="chapter-card__title">Agentic Workflows: The Fleet and The Squad</span>
-        <span class="chapter-card__desc">Two operating models for orchestrating multiple agents — parallel fleets and reviewed squads — and when to use each.</span>
+        <span class="chapter-card__desc">Two operating models for orchestrating multiple agents - parallel fleets and reviewed squads - and when to use each.</span>
         <span class="chapter-card__link">Read chapter →</span>
       </span>
     </a>
@@ -137,7 +137,7 @@ with links back to primary GitHub and Microsoft documentation so you can go deep
       <span class="chapter-card__body">
         <span class="chapter-card__num">Chapter 10</span>
         <span class="chapter-card__title">Recap: Rule Zero, Scaled</span>
-        <span class="chapter-card__desc">Bringing it together — judgement as the multiplier, governance as the guardrail, at fleet scale.</span>
+        <span class="chapter-card__desc">Bringing it together - judgement as the multiplier, governance as the guardrail, at fleet scale.</span>
         <span class="chapter-card__link">Read chapter →</span>
       </span>
     </a>
@@ -160,5 +160,5 @@ with links back to primary GitHub and Microsoft documentation so you can go deep
 "Engineering the AI-Native Cloud" looks at cloud native AI in the SDLC through a DevOps lens: Azure DevOps
 and GitHub as the system of record, agentic workflows and multi-agent review as the new unit of work, and
 GitHub Copilot as the control plane that keeps all of it governed, auditable, and accountable to a human.
-No case studies or statistics on this site are invented — where a number or example is used, it links to
+No case studies or statistics on this site are invented - where a number or example is used, it links to
 its primary source on Microsoft Learn, GitHub Docs, or the GitHub Blog.

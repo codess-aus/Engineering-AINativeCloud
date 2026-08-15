@@ -1,6 +1,6 @@
 site_name: Engineering the AI-Native Cloud
 site_description: >-
-  Cloud Native AI in the SDLC — a DevOps Asia Conference talk on agentic
+  Cloud Native AI in the SDLC - a DevOps Asia Conference talk on agentic
   workflows, GitHub Copilot, and owning the code in an AI-native world.
 site_author: Michelle Sandford
 repo_name: codess-aus
@@ -60,10 +60,10 @@ extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/codess-aus
-      name: GitHub — codess-aus
+      name: GitHub - codess-aus
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/in/michellesandford/
-      name: LinkedIn — Michelle Sandford
+      name: LinkedIn - Michelle Sandford
     - icon: fontawesome/solid/globe
       link: https://www.scaling-guacamole.com/
       name: Scaling Guacamole
