@@ -9,7 +9,7 @@ description: Every external link used across this site, plus further reading on 
   <img src="../assets/images/Close.webp"
        alt="Thank You and Q&A slide over a sunset photo of an imperial citadel reflected in a lotus pond, with contact details for GitHub, LinkedIn and a personal website."
        width="1448" height="1086" loading="eager">
-  <p class="hero-banner__caption">Thank You — Building a Better Future with Humans in Control</p>
+  <p class="hero-banner__caption">Thank You - Building a Better Future with Humans in Control</p>
 </div>
 
 Thank you for following along. Every link referenced across this site is collected here, along with a few
@@ -24,11 +24,11 @@ engineering for the AI-native era.
   <a class="anc-button" href="https://azure.github.io/git-ape/" target="_blank" rel="noopener">Git-Ape: agentic platform engineering →</a>
 </p>
 
-- **[Awesome GitHub Copilot](https://github.com/github/awesome-copilot)** — a community-maintained collection
+- **[Awesome GitHub Copilot](https://github.com/github/awesome-copilot)** - a community-maintained collection
   of custom agents, reusable instructions, prompts, and agentic workflow examples for GitHub Copilot.
-- **[Agentic workflows on GitHub](https://github.com/features/copilot)** — GitHub's own hub for Copilot's
+- **[Agentic workflows on GitHub](https://github.com/features/copilot)** - GitHub's own hub for Copilot's
   agent capabilities, including the coding agent and code review agent referenced throughout this site.
-- **[Git-Ape](https://azure.github.io/git-ape/)** — an open, multi-agent platform engineering framework for
+- **[Git-Ape](https://azure.github.io/git-ape/)** - an open, multi-agent platform engineering framework for
   Azure that shows agentic patterns (requirements gathering, architecture review, security gating, drift
   reconciliation) applied to infrastructure delivery, not just application code.
 
@@ -47,10 +47,10 @@ engineering for the AI-native era.
 
 ## Microsoft Learn & Microsoft blogs
 
-- [Foundations of Agentic AI in GitHub](https://learn.microsoft.com/en-us/training/modules/foundations-agentic-ai/) — Microsoft Learn training module
-- [Optimize DevOps with AI agents on Azure](https://learn.microsoft.com/en-us/training/paths/optimize-devops-ai-agents-azure/) — Microsoft Learn training path
-- [Agentic DevOps: evolving software development with GitHub Copilot and Microsoft Azure](https://azure.microsoft.com/en-us/blog/agentic-devops-evolving-software-development-with-github-copilot-and-microsoft-azure/) — Microsoft Azure Blog
-- [Agentic DevOps in action: reimagining every phase of the developer lifecycle](https://devblogs.microsoft.com/blog/reimagining-every-phase-of-the-developer-lifecycle/) — Microsoft Developer Blog
+- [Foundations of Agentic AI in GitHub](https://learn.microsoft.com/en-us/training/modules/foundations-agentic-ai/) - Microsoft Learn training module
+- [Optimize DevOps with AI agents on Azure](https://learn.microsoft.com/en-us/training/paths/optimize-devops-ai-agents-azure/) - Microsoft Learn training path
+- [Agentic DevOps: evolving software development with GitHub Copilot and Microsoft Azure](https://azure.microsoft.com/en-us/blog/agentic-devops-evolving-software-development-with-github-copilot-and-microsoft-azure/) - Microsoft Azure Blog
+- [Agentic DevOps in action: reimagining every phase of the developer lifecycle](https://devblogs.microsoft.com/blog/reimagining-every-phase-of-the-developer-lifecycle/) - Microsoft Developer Blog
 
 ## About the talk
 
@@ -58,8 +58,8 @@ This site accompanies "Engineering the AI-Native Cloud," a DevOps Asia Conferenc
 the SDLC. Get in touch or follow along:
 
 <p>
-  <a class="anc-button" href="https://github.com/codess-aus" target="_blank" rel="noopener">GitHub — codess-aus →</a>
-  <a class="anc-button" href="https://www.linkedin.com/in/michellesandford/" target="_blank" rel="noopener">LinkedIn — Michelle Sandford →</a>
+  <a class="anc-button" href="https://github.com/codess-aus" target="_blank" rel="noopener">GitHub - codess-aus →</a>
+  <a class="anc-button" href="https://www.linkedin.com/in/michellesandford/" target="_blank" rel="noopener">LinkedIn - Michelle Sandford →</a>
   <a class="anc-button" href="https://www.scaling-guacamole.com/" target="_blank" rel="noopener">scaling-guacamole.com →</a>
 </p>
 
