@@ -1,0 +1,104 @@
+site_name: Engineering the AI-Native Cloud
+site_description: >-
+  Cloud Native AI in the SDLC — a DevOps Asia Conference talk on agentic
+  workflows, GitHub Copilot, and owning the code in an AI-native world.
+site_author: Michelle Sandford
+repo_name: codess-aus
+repo_url: https://github.com/codess-aus/Engineering-AINativeCloud
+edit_uri: edit/main/docs/
+copyright: >
+  Copyright &copy; Michelle Sandford. Slide artwork and talk content licensed
+  for this companion site.
+
+theme:
+  name: material
+  language: en
+  logo: assets/images/Title.webp
+  favicon: assets/images/Title.webp
+  font:
+    text: Atkinson Hyperlegible
+    code: JetBrains Mono
+  icon:
+    repo: fontawesome/brands/github
+  features:
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.tracking
+    - navigation.footer
+    - navigation.top
+    - navigation.indexes
+    - toc.follow
+    - content.code.copy
+    - content.action.edit
+    - search.suggest
+    - search.highlight
+    - announce.dismiss
+  palette:
+    - media: "(prefers-color-scheme: dark)"
+      scheme: anc-dark
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode (high contrast)
+    - media: "(prefers-color-scheme: light)"
+      scheme: anc-light
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode (high contrast)
+    - scheme: anc-dark
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode (high contrast)
+    - scheme: anc-light
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode (high contrast)
+
+extra_css:
+  - stylesheets/extra.css
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/codess-aus
+      name: GitHub — codess-aus
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/michellesandford/
+      name: LinkedIn — Michelle Sandford
+    - icon: fontawesome/solid/globe
+      link: https://www.scaling-guacamole.com/
+      name: Scaling Guacamole
+  generator: false
+
+markdown_extensions:
+  - toc:
+      permalink: "#"
+      title: On this page
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - attr_list
+  - md_in_html
+  - tables
+  - footnotes
+  - def_list
+
+nav:
+  - Home: index.md
+  - Chapters:
+      - "1. A Redesign, Not a Bolt-On": chapters/01-redesign.md
+      - "2. Rule Zero: You Own the Code": chapters/02-rule-zero.md
+      - "3. Rule Zero in Practice: Accountability": chapters/03-accountability.md
+      - "4. Who Gets Replaced, Who Becomes Irreplaceable": chapters/04-replaceable.md
+      - "5. Agentic Workflows: The Fleet and The Squad": chapters/05-fleet-squad.md
+      - "6. The Backlog Has No Bottom": chapters/06-backlog.md
+      - "7. The Demo: A Squad Clears a Backlog Item": chapters/07-demo.md
+      - "8. The 2-5 Year Business Cliff": chapters/08-business-cliff.md
+      - "9. GitHub as the Holistic Control Plane": chapters/09-control-plane.md
+      - "10. Recap: Rule Zero, Scaled": chapters/10-recap.md
+  - Resources: resources.md
