@@ -62,8 +62,3 @@ the SDLC. Get in touch or follow along:
   <a class="anc-button" href="https://www.linkedin.com/in/michellesandford/" target="_blank" rel="noopener">LinkedIn - Michelle Sandford →</a>
   <a class="anc-button" href="https://www.scaling-guacamole.com/" target="_blank" rel="noopener">scaling-guacamole.com →</a>
 </p>
-
-!!! note "A note on sources"
-    Nothing on this site invents a case study, statistic, or benchmark. Every factual claim about GitHub or
-    Microsoft product capability links to its primary documentation above. Where the talk uses an anecdote
-    (see [Chapter 2](chapters/02-rule-zero.md)), it's presented as a story illustrating a risk, not as data.
